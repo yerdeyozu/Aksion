@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil BY M</title>
+    <link rel="preconnect" href="https://i.pinimg.com/1200x/62/9c/15/629c158f5c9e651a6d733674f0547b6e.jpg">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #6366f1;
+            --html-orange: #ff6b4a;
+            --valorant-red: #ff4655;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #ffffff;
+            background-image: 
+            radial-gradient(circle at center, rgba(35, 48, 66, 0.4) 0%, #090a0f 85%),
+            linear-gradient(to right, rgba(99, 99, 99, 0.541) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: auto, 45px 45px, 45px 45px;
+            background-color: #090a0f; 
+        }
+
+        body::before {
+            content: "VALION";       
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20vw;            
+            font-weight: 900;           
+            letter-spacing: 0.05em;     
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: rgba(255, 255, 255, 0.349);
+            text-shadow: 
+            2px 2px 0px rgba(0, 0, 0, 0.8),
+            3px 3px 0px rgba(0, 0, 0, 0.8),
+            4px 4px 0px rgba(0, 0, 0, 0.9),
+            15px 9px 0px rgba(0, 0, 0, 1.0);
+            z-index: 0;                 
+            pointer-events: none;       
+            white-space: nowrap;
+        }
+
+        .container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(25px);              
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            z-index: 1;   
+            padding: 40px;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow:0 30px 60px rgba(0, 0, 0, 0.5),
+                inset 0 1px 2px rgba(255, 255, 255, 0.25),
+                inset 0 -1px 2px rgba(255, 255, 255, 0.05);
+            box-sizing: border-box;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #1a1c23; 
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar:hover {
+            transform: scale(1.06) rotate(2deg);
+        }
+
+        .badge-class {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d81414;
+            color: #ffffff;
+            padding: 4px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(61, 30, 30, 0.4);
+            white-space: nowrap;
+}
+
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.25rem;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .info-row:first-child { padding-top: 0; }
+
+        .info-label { color: var(--text-secondary); }
+        .info-value { font-weight: 500; }
+
+        .grid-skills {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .icon-laptop { background: rgba(255, 107, 74, 0.15); }
+        .icon-gamepad { background: rgba(255, 70, 85, 0.15); }
+
+        .skill-text h4 { font-size: 0.95rem; font-weight: 600; }
+        .skill-text p { font-size: 0.8rem; color: var(--text-secondary); }
+
+        /* --- 📱 MEDIA QUERY KHUSUS LAYAR HP KECIL (<360px) --- */
+        @media (max-width: 360px) {
+            .container {
+                padding: 25px 15px; /* Memperkecil padding dalam kartu */
+            }
+            .avatar {
+                width: 95px;
+                height: 95px;
+            }
+            .profile-header h1 {
+                font-size: 1.4rem;
+            }
+            body::before {
+                font-size: 26vw; /* Memastikan teks latar belakang tetap proporsional */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="profile-header">
+            <div class="avatar-wrapper">
+                <div class="avatar"><img src="https://i.pinimg.com/1200x/62/9c/15/629c158f5c9e651a6d733674f0547b6e.jpg"></div>
+                <div class="badge-class">PRIDE</div>
+            </div>
+            <h1>AelNotWell</h1>
+            <p class="subtitle">Gaming And Chilling</p>
+        </header>
+
+        <section>
+            <h2>📝 Data Diri</h2>
+            <div class="info-card">
+                <div class="info-row">
+                    <span class="info-label">Name</span>
+                    <span class="info-value">AelDeYozu</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Race</span>
+                    <span class="info-value">Demon</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>✨ Hobi & Keahlian</h2>
+            <div class="grid-skills">
+                <div class="skill-item">
+                    <div class="skill-icon icon-laptop">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line><line x1="12" y1="17" x2="12" y2="20"></line></svg>
+                    </div>
+                    <div class="skill-text">
+                        <h4>Belajar HTML Dasar</h4>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon icon-gamepad">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4655" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="3"></rect></svg>
+                    </div>
+                    <div class="skill-text">
+                        <h4>Push Radiant Valorant</h4>
+                        <p>E-Sports / Gaming</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
